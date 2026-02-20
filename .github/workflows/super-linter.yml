@@ -7,6 +7,9 @@ on: # yamllint disable-line rule:truthy
     # branches-ignore: [master]
   pull_request:
     branches: [master]
+
+permissions: {}
+
 jobs:
   build:
     name: Lint
