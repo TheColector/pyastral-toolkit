@@ -1,3 +1,5 @@
+[![Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 # pyastral-toolkit
 
 Modern python development environment available as Docker image with Astral tools (uv, ruff, ux)
