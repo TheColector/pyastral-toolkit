@@ -3,13 +3,10 @@ name: Lint
 
 on:
   push:
-    branches: ['**']
+    branches: ["**"]
     # branches-ignore: [master]
   pull_request:
     branches: [master]
-
-permissions: {}
-
 jobs:
   build:
     name: Lint
@@ -40,6 +37,6 @@ jobs:
         uses: super-linter/super-linter@v8.5.0 # x-release-please-version
         env:
           DEFAULT_BRANCH: master
-          FORCE_PUSH_EVENT: true
+          VALIDATE_ALL_CODEBASE: false
           # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
