@@ -7,7 +7,11 @@ on:
   pull_request:
     branches: [master]
 
-permissions: {}
+permissions:
+  # Required to write linting fixes to the repository
+  contents: write
+  # Required to write Super-Linter status checks
+  statuses: write
 
 jobs:
   build:
@@ -39,3 +43,9 @@ jobs:
           VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
           FIX_MARKDOWN_PRETTIER: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: apply automated linting fixes"
+          branch: ${{ github.head_ref }}
