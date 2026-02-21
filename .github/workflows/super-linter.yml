@@ -37,4 +37,5 @@ jobs:
           DEFAULT_BRANCH: master
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_GITHUB_ACTIONS_ZIZMOR: false
+          FIX_MARKDOWN_PRETTIER: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
