@@ -35,7 +35,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Super-linter
         uses: super-linter/super-linter@v8.5.0
