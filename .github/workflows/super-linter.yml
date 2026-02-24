@@ -1,5 +1,5 @@
 ---
-name: Lint
+name: Lint codebase
 
 on:
   push:
@@ -15,7 +15,7 @@ permissions:
   statuses: write
 
 jobs:
-  build:
+  Lint:
     name: Lint
     runs-on: ubuntu-latest
 
